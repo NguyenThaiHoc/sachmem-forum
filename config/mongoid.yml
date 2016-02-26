@@ -1,0 +1,29 @@
+development:
+  clients:
+    default:
+      database: sachmem_forum_development
+      hosts:
+        - localhost:27017
+      options:
+        user: 'root'
+        password: 'root'
+
+test:
+  clients:
+    default:
+      database: sachmem_forum_test
+      hosts:
+        - localhost:27017
+      options:
+        read:
+          mode: :primary
+        max_pool_size: 1
+        user: 'root'
+        password: 'root'
+
+production:
+  clients:
+    default:
+      database: sachmem_forum_development
+      hosts:
+        - localhost:27017

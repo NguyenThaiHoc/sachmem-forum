@@ -7,16 +7,18 @@ gem "coffee-rails", "4.1.0"
 gem "jquery-rails", "4.0.3"
 gem "turbolinks", "2.3.0"
 gem "jbuilder", "2.2.3"
-gem "bootstrap-sass", "3.2.0.0"
 gem "sdoc", "0.4.0", group: :doc
+
+gem "will_paginate", "~> 3.0.6"
 gem 'kaminari', '0.16.3'
 gem 'config', '1.0.0'
-gem 'mysql2', '~> 0.3.20'
-gem 'slim'
+
 gem "font-awesome-rails"
 gem "angularjs-rails"
-gem "will_paginate", "~> 3.0.6"
-gem "ransack"
+gem "bootstrap-sass", "3.2.0.0"
+
+gem "mongoid", "5.1.0"
+gem "bson_ext"
 
 group :development, :test do
   gem 'byebug'
