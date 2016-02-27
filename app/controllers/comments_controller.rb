@@ -5,6 +5,7 @@ class CommentsController < ApplicationController
   end
 
   def show
+    
   end
 
   def new
@@ -13,6 +14,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new comment_params
+    debugger
     if @comment.save
       flash[:success] = t "comments.create_success"
       redirect_to @comment
@@ -46,7 +48,7 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:comment).permit :name, :text, :link_image, :link_video
+    params.require(:comment).permit :name, :text, :link_image, :link_video, :image
   end
 
   def load_comment

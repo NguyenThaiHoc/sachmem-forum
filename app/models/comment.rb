@@ -6,4 +6,7 @@ class Comment
   field :link_video, type: String
   field :created_at, type: DateTime
   field :sub_comments, type: Array, default: ['1', '2', '3']
+
+  attr_accessor :image 
+  mount_uploader :image, CommentImageUploader
 end

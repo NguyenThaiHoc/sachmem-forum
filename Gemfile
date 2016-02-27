@@ -19,7 +19,9 @@ gem "bootstrap-sass", "3.2.0.0"
 
 gem "mongoid", "5.1.0"
 gem "bson_ext"
-gem "paperclip", "4.3.5"
+gem 'carrierwave',             '0.10.0'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'	
+gem 'mini_magick',             '3.8.0'
 
 group :development, :test do
   gem 'byebug'
