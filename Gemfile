@@ -19,6 +19,7 @@ gem "bootstrap-sass", "3.2.0.0"
 
 gem "mongoid", "5.1.0"
 gem "bson_ext"
+gem "paperclip", "4.3.5"
 
 group :development, :test do
   gem 'byebug'

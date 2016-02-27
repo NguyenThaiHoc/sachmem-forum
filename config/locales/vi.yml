@@ -1,2 +1,9 @@
 vi:
   base_title: "Sách Mềm Forum"
+  comments:
+    create_success: "Đã tạo thành công"
+    create_error: "Có lỗi khi tạo"
+    update_success: "Đã sửa thành công"
+    update_error: "Có lỗi khi sửa"
+    destroy_success: "Đã xóa thành công"
+    destroy_error: "Có lỗi khi xóa"

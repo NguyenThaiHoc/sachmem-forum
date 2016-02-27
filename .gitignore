@@ -2,9 +2,11 @@
 .rvmrc
 /test/*
 /spec/*
-/config/database.yml
-/config/settings.local.yml
-/config/settings/*.local.yml
-/config/environments/*.local.yml
+config/database.yml
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml
+config/mongoid.yml
+/db/*
 /tmp/*
 /log/*
