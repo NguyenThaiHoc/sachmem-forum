@@ -23,6 +23,8 @@ gem 'carrierwave',             '0.10.0'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'	
 gem 'mini_magick',             '3.8.0'
 
+gem 'streamio-ffmpeg'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'

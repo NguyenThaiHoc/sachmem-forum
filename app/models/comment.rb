@@ -9,4 +9,5 @@ class Comment
 
   attr_accessor :image 
   mount_uploader :image, CommentImageUploader
+  mount_uploader :video, VideoUploader
 end
