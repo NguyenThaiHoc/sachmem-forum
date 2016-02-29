@@ -7,7 +7,8 @@
 <%= @comment.link_video %>
 <br>
 
-<%= @comment.to_json %>
+<%=@comment.link_video %>
+
 <%= image_tag @comment.image.url %>
 <%= image_tag @comment.image.small.url %>
 <%= video_tag @comment.video.url, :size => "320x240", :controls => true %>

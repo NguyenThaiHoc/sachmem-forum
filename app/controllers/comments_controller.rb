@@ -1,7 +1,9 @@
 class CommentsController < ApplicationController
   before_action :load_comment, only: [:show, :edit, :update, :destroy]
   def index
-    @comments = Comment.all
+    @comment = Comment.new
+    @comments = Comment.all.to_a
+    
   end
 
   def show
@@ -14,12 +16,13 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.new comment_params
+
     if @comment.save
       flash[:success] = t "comments.create_success"
-      redirect_to @comment
+      redirect_to comments_url
     else
       flash[:error] = t "comments.create_error"
-      render :new
+      redirect_to :back
     end
   end
 
@@ -47,7 +50,7 @@ class CommentsController < ApplicationController
 
   private
   def comment_params
-    params.require(:comment).permit :name, :text, :link_image, :link_video, :image, :video
+    params.require(:comment).permit :name, :text, :link, :link_image, :link_video, :image, :video
   end
 
   def load_comment
