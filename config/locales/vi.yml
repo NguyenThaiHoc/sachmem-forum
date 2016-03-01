@@ -5,7 +5,7 @@ vi:
     edit: "Sửa"
     show: "Xem"
     destroy: "Xóa"
-  comments:
+  documents:
     create_success: "Đã tạo thành công"
     create_error: "Có lỗi khi tạo"
     update_success: "Đã sửa thành công"
@@ -14,20 +14,20 @@ vi:
     destroy_error: "Có lỗi khi xóa"
   mongoid:
     models:
-      comment: "tài liệu"
+      document: "tài liệu"
     attributes:
-      comment:
+      document:
         name: "Tên tài liệu"
         text: "Bài viết"
-        link: "Ảnh đại diện"
-        link_image: "Link ảnh"
-        link_video: "Link video"
         image: "Ảnh"
         video: "Video"
-        sub_comments: "Bình luận"
+        link_text: "Link bài viết"
+        link_image: "Link ảnh"
+        link_video: "Link video"
+        sub_documents: "Bình luận"
     errors:
       models:
-        comment:
+        document:
           attributes:
             name:
               blank: "không thể trống"

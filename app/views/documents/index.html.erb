@@ -1,0 +1,43 @@
+<h1 class="text-center"> Documents </h1>
+
+<div class="flex-container">
+  <div class="width-md-60">
+    <% @documents.each do |document| %>
+      <div class=" ui segment documents">
+        <div class="document">
+          <a class="avatar">
+            <%= image_tag "elliot.jpg" %>
+          </a>
+
+          <div class="content">
+            <%= link_to document.name, document, class: "author" %>
+            <div class="metadata">
+              <span class="date"><%= document.created_at %></span>
+            </div>
+
+            <div class="text">
+              <%= document.text %>
+            </div>
+
+            <% if document.link_text.present? %>
+              <div class="text">  
+                Link : <a href="<%= document.link_text %>" target="_blank"> Here  </a>
+              </div>
+            <% end %>
+
+            <div class="text">
+               <%= image_tag document.image.small.url %>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    <% end %>
+  </div>
+
+  <div class="width-md-40">
+    <div class="ui segment">
+      <%= render "documents/new" %>
+    </div>
+  </div>
+</div>
