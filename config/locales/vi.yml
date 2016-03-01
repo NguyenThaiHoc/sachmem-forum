@@ -1,5 +1,10 @@
 vi:
   base_title: "Sách Mềm Forum"
+  button:
+    create: "Tạo"
+    edit: "Sửa"
+    show: "Xem"
+    destroy: "Xóa"
   comments:
     create_success: "Đã tạo thành công"
     create_error: "Có lỗi khi tạo"
@@ -7,3 +12,25 @@ vi:
     update_error: "Có lỗi khi sửa"
     destroy_success: "Đã xóa thành công"
     destroy_error: "Có lỗi khi xóa"
+  mongoid:
+    models:
+      comment: "tài liệu"
+    attributes:
+      comment:
+        name: "Tên tài liệu"
+        text: "Bài viết"
+        link: "Ảnh đại diện"
+        link_image: "Link ảnh"
+        link_video: "Link video"
+        image: "Ảnh"
+        video: "Video"
+        sub_comments: "Bình luận"
+    errors:
+      models:
+        comment:
+          attributes:
+            name:
+              blank: "không thể trống"
+              too_long: "không vượt quá 25 ký tự"
+            text:
+              blank: "không thể trống"
