@@ -1,8 +1,71 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* Headroom */
+.headroom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all .2s ease-in-out;
+}
+
+.headroom--unpinned {
+  top: -100px;
+}
+
+.headroom--pinned {
+  top: 0;
+}
+
+/* Container */
+.container {
+  padding: 0;
+}
+
+.container-padding-8 {
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+.container-padding-5 {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.container-padding-3 {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.container-padding-10px {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.container-padding-20px {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container-padding-30px {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* Bootstrap */
+.navbar {
+  margin-bottom: 0;
+}
+
+
+/* application.html */
 #alert-message {
   position: absolute;
   top: 10px;
   right: 20px;
+}
+
+.body-wrap {
+  margin-top: 50px;
 }
