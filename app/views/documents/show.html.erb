@@ -1,0 +1,9 @@
+<%= @document.name %>
+
+<%= @document.text %>
+<%= image_tag @document.image.small.url %>
+<%= video_tag @document.video.url, size: "320x240", controls: true %>
+
+<%= @document.link_text %>
+<%= @document.link_image %>
+<%= @document.link_video %>

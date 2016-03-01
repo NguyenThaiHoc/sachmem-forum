@@ -1,0 +1,42 @@
+<%= form_for @document do |f| %>
+  <div class="form-group">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, class: "form-control" %><br>
+  </div> 
+
+  <div class="form-group">
+    <%= f.label :text %><br>
+    <%= f.text_field :text, class: "form-control"  %><br>
+  </div>
+
+  <%= f.label :image %> <br>
+  <label>
+    <%= f.file_field :image, class: "upload" %>
+    <div class="btn-default">Chọn file ảnh từ máy tính</div>
+  </label>
+
+  <br>
+
+  <%= f.label :video %> <br>
+  <label>
+    <%= f.file_field :video, class: "upload" %>
+    <div class="btn-default">Chọn file video từ máy tính</div>
+  </label>
+
+  <div class="form-group">
+    <%= f.label :link_text %><br>
+    <%= f.text_field :link_text, class: "form-control"  %><br>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :link_image %><br>
+    <%= f.text_field :link_image, class: "form-control"  %><br>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :link_video %><br>
+    <%= f.text_field :link_video, class: "form-control"  %><br>
+  </div>
+
+  <%= f.submit t("button.edit"), class: "btn btn-block btn-success" %>
+<% end %>
