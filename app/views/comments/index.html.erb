@@ -6,41 +6,40 @@
     <%= render 'comments/new' %>
     </div>
   </div>
+
   <% @comments.each do |comment| %>
-  <div class="row">
-  <div class="col-md-6 col-md-offset-2">
-  <div class=" ui segment comments">
-    <div class="comment">
-      <a class="avatar">
-        <img src="/assets/elliot.jpg">
-      </a>
-      <div class="content">
-        <a class="author"><%= comment.name %></a>
-        <div class="metadata">
-          <span class="date">      <%= comment.created_at %>  </span>
-        </div>
-        <div class="text">
-          <%= comment.text %>
-        </div>
-        <% if comment.link.present? %>
-          <div class="text">  
-            Link : <a href="<%= comment.link %>" target="_blank"> Here  </a>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-2">
+        <div class=" ui segment comments">
+          <div class="comment">
+            <a class="avatar">
+              <img src="/assets/elliot.jpg">
+            </a>
+
+            <div class="content">
+              <a class="author"><%= comment.name %></a>
+              <div class="metadata">
+                <span class="date">      <%= comment.created_at %>  </span>
+              </div>
+
+              <div class="text">
+                <%= comment.text %>
+              </div>
+
+              <% if comment.link.present? %>
+                <div class="text">  
+                  Link : <a href="<%= comment.link %>" target="_blank"> Here  </a>
+                </div>
+              <% end %>
+
+              <div class="text">
+                 <%= image_tag comment.image.small.url %>
+              </div>
+            </div>
           </div>
-        <% end %>
-        <div class="text">
-           <%= image_tag comment.image.small.url %>
+
         </div>
       </div>
     </div>
-
-  </div>
-  </div>
-  </div>
   <% end %>
-
-
 </div>
-
-
-
-
