@@ -15,5 +15,6 @@ module SachmemForum
   class Application < Rails::Application
     config.time_zone = 'Hanoi'
     config.i18n.default_locale = :vi
+    config.exceptions_app = self.routes
   end
 end

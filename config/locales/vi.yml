@@ -1,5 +1,11 @@
 vi:
   base_title: "Sách Mềm Forum"
+  errors:
+    number_404: "404"
+    number_500: "500"
+    content_404: "Trang bạn vừa truy cập hiện không tồn tại!"
+    content_500: "Trang không truy cập được!"
+    back_home_page: "Quay về trang chủ"
   button:
     create: "Tạo"
     edit: "Sửa"
