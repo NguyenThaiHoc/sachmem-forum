@@ -20,9 +20,8 @@ gem "bootstrap-sass", "3.2.0.0"
 gem "mongoid", "5.1.0"
 gem "bson_ext"
 gem 'carrierwave',             '0.10.0'
-gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'	
+gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'	
 gem 'mini_magick',             '3.8.0'
-
 gem 'streamio-ffmpeg'
 
 group :development, :test do
