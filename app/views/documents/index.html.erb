@@ -1,37 +1,36 @@
-<h1 class="text-center"> Documents </h1>
+<div class="flex-container flex-space-around flex-row-wrap">
+  <div class="width-md-100">
+    <div id="button-show" class="button-show btn-default">
+      <%= t("documents.index.add_document") %>
+    </div>
 
-<div class="flex-container">
-  <div class="width-md-60">
-    <% @documents.each do |document| %>
-      <div class=" ui segment documents">
-        <div class="document">
-          <a class="avatar">
-            <%= image_tag "elliot.jpg" %>
-          </a>
-
-          <div class="content">
-            <%= link_to document.name, document, class: "author" %>
-            <div class="metadata"><%= document.created_at %></div>
-            <div class="text"><%= document.text %></div>
-            <div class="image"><%= image_tag document.image.small.url %></div>
-
-            <% if document.link_text.present? %>
-              <div class="text">  
-                Link : <a href="<%= document.link_text %>" target="_blank"> Here  </a>
-              </div>
-            <% end %>
-
-            
-          </div>
-        </div>
-
-      </div>
-    <% end %>
-  </div>
-
-  <div class="width-md-40">
-    <div class="ui segment">
+    <div id="form" class="form-new hidden">
       <%= render "documents/new" %>
     </div>
   </div>
+
+  <div class="width-md-100">
+    <% @documents.each do |document| %>
+      <div class="document-info">
+        <%= image_tag "logo.png" %>
+        <%= link_to document.name, document, class: "author" %>
+        <div class="metadata"><%= document.created_at %></div>
+        <div class="text"><%= document.text %></div>
+        <div class="image"><%= image_tag document.image.small.url %></div>
+        <div class="text"><%= document.link_text %></div>
+        <div class="text"><%= document.link_image %></div>
+        <div class="text"><%= document.link_video %></div>
+      </div>
+    <% end %>
+  </div>
 </div>
+
+<script type="text/javascript">  
+  $("#button-show").click(function() {
+    $("#form").removeClass("hidden").fadeIn(500);
+  });
+
+  $("#button-hide").click(function(){
+    $("#form").fadeOut(500);
+  });
+</script>
