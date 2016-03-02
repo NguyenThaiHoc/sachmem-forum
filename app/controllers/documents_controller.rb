@@ -3,11 +3,9 @@ class DocumentsController < ApplicationController
   def index
     @document = Document.new
     @documents = Document.all.to_a
-    
   end
 
   def show
-    
   end
 
   def new

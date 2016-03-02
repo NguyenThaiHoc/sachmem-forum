@@ -11,6 +11,7 @@ vi:
     edit: "Sửa"
     show: "Xem"
     destroy: "Xóa"
+    hide: "Ẩn"
   documents:
     create_success: "Đã tạo thành công"
     create_error: "Có lỗi khi tạo"
@@ -18,6 +19,10 @@ vi:
     update_error: "Có lỗi khi sửa"
     destroy_success: "Đã xóa thành công"
     destroy_error: "Có lỗi khi xóa"
+    index:
+      upload_image: "Chọn file ảnh từ máy tính"
+      upload_video: "Chọn file video từ máy tính"
+      add_document: "Thêm bài viết"
   mongoid:
     models:
       document: "tài liệu"
