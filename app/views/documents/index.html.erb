@@ -11,13 +11,9 @@
 
           <div class="content">
             <%= link_to document.name, document, class: "author" %>
-            <div class="metadata">
-              <span class="date"><%= document.created_at %></span>
-            </div>
-
-            <div class="text">
-              <%= document.text %>
-            </div>
+            <div class="metadata"><%= document.created_at %></div>
+            <div class="text"><%= document.text %></div>
+            <div class="image"><%= image_tag document.image.small.url %></div>
 
             <% if document.link_text.present? %>
               <div class="text">  
@@ -25,9 +21,7 @@
               </div>
             <% end %>
 
-            <div class="text">
-               <%= image_tag document.image.small.url %>
-            </div>
+            
           </div>
         </div>
 
